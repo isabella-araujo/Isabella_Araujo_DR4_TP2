@@ -1,0 +1,26 @@
+﻿@page "/"
+@model TP2.Pages.PessoasModel
+@{
+    ViewData["Title"] = "Pessoas";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>CPF</td>
+            <td>Nome</td>
+            <td>Idade</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.PessoasList)
+        {
+            <tr>
+                <td>@p.Cpf</td>
+                <td>@p.Nome</td>
+                <td>@p.Idade</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
